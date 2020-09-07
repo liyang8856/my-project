@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="./myvue2.js"></script>
+</head>
+
+<body>
+
+    <div id="app">
+        {{message}}
+        <!-- 元素节点 -->
+        <input v-model="message" class="myc" />
+        <div v-html="message2"></div>
+        <!-- <div>
+            <div>
+                {{message}}
+            </div>
+        </div> -->
+        <!-- <div><div>{{message}}</div></div> -->
+    </div>
+</body>
+<script>
+    // 暗号：空调
+    let vm = new Vue({
+        el: "#app",
+        data: {
+            message: "数据",
+            message2: '<h1 style="color:red;">标题</h1>'
+            // mydata:"我的数据"
+        }
+    })
+</script>
+
+</html>
